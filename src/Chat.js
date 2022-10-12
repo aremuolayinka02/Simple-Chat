@@ -6,7 +6,7 @@ export const Chat = ({ chat, username }) => {
     <div className="message__container">
       <p className="avatar">{username[0]}</p>
       <div className="message">
-        <p>{username}</p>
+        <p className="username">{username}</p>
         <p>{chat}</p>
       </div>
     </div>
