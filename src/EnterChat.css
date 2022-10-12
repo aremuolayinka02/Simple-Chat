@@ -5,13 +5,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    /* height: 200px; */
+    width: 100%;
   }
   
 .username {
   padding: 10px;
   font-size: 1.1rem;
-
 }
 
 p {
@@ -21,4 +21,8 @@ p {
 button {
   margin-top: 10px;
   padding: 10px;
+}
+
+.chat-area {
+  width: 100%;
 }

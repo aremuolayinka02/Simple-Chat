@@ -1,30 +1,43 @@
 import React, { useState } from "react";
+import Chat from "./Chat";
 import "./EnterChat.css";
 
 export const EnterChat = () => {
   const [username, setUsername] = useState("");
+  const [chats, showChats] = useState(false);
+  const [showUserField, setShowUserField] = useState(true);
 
-  const submitUsername = (userInput) => {
-    // if username was non-empty string, true, 42, Infinity, [], ...
-    if (username) {
-      //Goos
+  const submitUsername = () => {
+    // if username was not an empty string
+    if (username !== "") {
+      //display the chat area
+      showChats(true);
+      setShowUserField(false);
     }
   };
 
   return (
-    <div className="container">
-      <p>Enter Username</p>
+    <div>
+      {showUserField && (
+        <div className="container">
+          <p>Enter Username</p>
 
-      <input
-        className="username"
-        type="input"
-        placeholder="Enter Username"
-        onChange={(text) => setUsername(text.target.value)}
-      />
+          <input
+            className="username"
+            type="input"
+            placeholder="Enter Username"
+            onChange={(text) => setUsername(text.target.value)}
+          />
 
-      <p>{username}</p>
+          <button onClick={() => submitUsername(username)}>Enter</button>
+        </div>
+      )}
 
-      <button onClick={submitUsername(username)}>Enter</button>
+      {chats && (
+        <div className="chat-area">
+          <Chat />
+        </div>
+      )}
     </div>
   );
 };

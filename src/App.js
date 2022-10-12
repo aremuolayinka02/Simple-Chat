@@ -2,7 +2,7 @@ import EnterChat from "./EnterChat";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <EnterChat />
     </div>
   );
