@@ -24,7 +24,7 @@ export const EnterChat = () => {
 
           <input
             className="username"
-            type="input"
+            type="text"
             placeholder="Enter Username"
             onChange={(text) => setUsername(text.target.value)}
           />
