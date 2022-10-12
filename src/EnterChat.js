@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Chat from "./Chat";
+import ChatPage from "./ChatPage";
 import "./EnterChat.css";
 
 export const EnterChat = () => {
@@ -35,7 +35,7 @@ export const EnterChat = () => {
 
       {chats && (
         <div className="chat-area">
-          <Chat />
+          <ChatPage username={username} />
         </div>
       )}
     </div>
